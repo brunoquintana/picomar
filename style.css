@@ -1,36 +1,40 @@
-/* Reset default browser margins */
+/* Clean browser reset */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
+
 body {
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    background-color: #f0f4f8;
-    color: #1a202c;
+    /* Using modern system fonts that look crisp on any device */
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    background-color: #f8fafc; /* Ultra-clean slate white */
+    color: #0f172a; /* Deep charcoal instead of harsh black */
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
     min-height: 100vh;
-    text-align: center;
-    padding: 20px;
+    padding: 2rem;
 }
 
 h1 {
-    color: #0056b3;
-    font-size: 3rem;
-    margin-bottom: 15px;
-    letter-spacing: -1px;
+    font-size: 3.5rem;
+    font-weight: 800;
+    letter-spacing: -0.03em;
+    color: #0284c7; /* A clean, professional ocean blue */
+    margin-bottom: 1.5rem;
+    text-align: center;
 }
 
 p {
     font-size: 1.25rem;
-    color: #4a5568;
-    background: #ffffff;
-    padding: 30px 40px;
-    border-radius: 12px;
-    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
-    max-width: 600px;
-    border-top: 5px solid #0056b3;
+    color: #475569;
+    line-height: 1.7;
+    max-width: 560px;
+    text-align: center;
+    /* A subtle, elegant left-border accent instead of a clunky box */
+    border-left: 3px solid #0284c7;
+    padding-left: 1.5rem;
+    background: transparent;
 }
