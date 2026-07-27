@@ -77,6 +77,8 @@ body {
     cursor: pointer;
     transition: all 0.2s ease;
     box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05);
+    white-space: nowrap; /* Forces text to stay on one line */
+    flex-shrink: 0;      /* Prevents the browser from squeezing it */
 }
 
 .lang-toggle:hover {
@@ -180,9 +182,10 @@ p {
 }
 
 /* --- MOBILE RESPONSIVENESS --- */
-@media (max-width: 768px) {
+@media (max-width: 900px) {
+    /* Hide the text links on mobile to prevent the traffic jam */
     .nav-links {
-        display: none; /* Keeps mobile header clean until we build a hamburger menu */
+        display: none; 
     }
     
     h1 {
