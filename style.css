@@ -95,11 +95,24 @@ body {
     min-height: 85vh;
     padding: 4rem 5%;
     text-align: center;
-    background: radial-gradient(circle at 50% 10%, #e0f2fe 0%, var(--sea-salt) 60%);
+    
+    /* Swap this in when you have your picture inside your assets folder! */
+    background-image: url('assets/your-photo-name.jpg');
+    background-size: cover;       /* Ensures the photo covers the whole screen */
+    background-position: center;  /* Keeps the focus in the middle of the image */
 }
 
 .hero-content {
     max-width: 850px;
+    width: 100%;
+    /* --- FROSTED GLASS CARD EFFECT --- */
+    background: rgba(255, 255, 255, 0.75); /* 75% opacity white */
+    backdrop-filter: blur(16px);           /* Blurs whatever is behind the card */
+    -webkit-backdrop-filter: blur(16px);   /* Ensures Safari on iPhones blurs it too */
+    padding: 3.5rem 3rem;                  /* Adds breathing room inside the box */
+    border-radius: 24px;                   /* Smooth, modern rounded corners */
+    border: 1px solid rgba(255, 255, 255, 0.8); /* Subtle crisp edge */
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.08); /* Soft drop shadow to lift it off the page */
 }
 
 .badge {
@@ -168,14 +181,26 @@ p {
     box-shadow: 0 6px 16px rgba(22, 163, 74, 0.3);
 }
 
-.cta-button.secondary {
+.cta-button.second {
+    background-color: #c1558b;
+    color: var(--white);
+    box-shadow: 0 4px 12px rgba(22, 163, 74, 0.2);
+}
+
+.cta-button.second:hover {
+    border-color: #c1558b;
+    background-color: #8a49a1;
+    transform: translateY(-2px);
+}
+
+.cta-button.third {
     background-color: var(--white);
     color: var(--atlantic-navy);
     border: 1px solid var(--border-subtle);
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.02);
 }
 
-.cta-button.secondary:hover {
+.cta-button.third:hover {
     border-color: #cbd5e1;
     background-color: #f1f5f9;
     transform: translateY(-2px);
@@ -201,5 +226,10 @@ p {
     
     .cta-button {
         width: 100%;
+    }
+
+    .hero-content {
+        padding: 2.5rem 1.2rem; /* Shrinks card padding so phone screens have plenty of room */
+        border-radius: 18px;
     }
 }
