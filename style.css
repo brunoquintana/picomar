@@ -96,10 +96,11 @@ body {
     padding: 4rem 5%;
     text-align: center;
     
-    /* Swap this in when you have your picture inside your assets folder! */
-    background-image: url('assets/your-photo-name.jpg');
-    background-size: cover;       /* Ensures the photo covers the whole screen */
-    background-position: center;  /* Keeps the focus in the middle of the image */
+    /* --- ADDED OVERLAY TINT: 50% Atlantic Navy gradient over the photo --- */
+    background-image: url('assets/picomar.jpg');
+    background-size: 100% auto;       
+    background-position: center 25%; 
+    background-repeat: no-repeat; 
 }
 
 .hero-content {
